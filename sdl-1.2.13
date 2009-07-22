@@ -1,0 +1,3 @@
+location:http://www.libsdl.org/release/SDL-1.2.13.tar.gz
+optional:alsa,esound,arts,nas,nasm,xorg,aalib,directfb,svgalib,pth
+config:--prefix=/usr

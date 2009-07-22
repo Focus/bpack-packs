@@ -1,0 +1,10 @@
+location:http://www.lua.org/ftp/lua-5.1.4.tar.gz
+config:no
+make:linux
+makeinstall:no
+postinstall:make INSTALL_TOP=/usr install &&
+mkdir -pv /usr/share/lua/5.1 &&
+mkdir -pv /usr/lib/lua/5.1 &&
+sed -i 's@/usr/local@/usr@g' etc/lua.pc &&
+cp etc/lua.pc /usr/lib/pkgconfig &&
+cp etc/lua.ico /usr/share/icons

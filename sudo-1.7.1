@@ -1,0 +1,9 @@
+location:http://www.sudo.ws/sudo/dist/sudo-1.7.1.tar.gz
+optional:openldap
+config: --prefix=/usr --libexecdir=/usr/lib \
+    --enable-noargs-shell --with-ignore-dot --with-all-insults \
+    --enable-shell-sets-home
+postinstall:if [ -f /etc/pam.d/su ]; then
+  sed "s/su$/&do/" /etc/pam.d/su > /etc/pam.d/sudo
+fi
+

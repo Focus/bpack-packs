@@ -1,0 +1,3 @@
+location:http://alsa.cybermirror.org/lib/alsa-lib-1.0.20.tar.bz2
+postinstall:install -v -m644 -D doc/asoundrc.txt \
+    /usr/share/doc/alsa-lib-1.0.20/asoundrc.txt

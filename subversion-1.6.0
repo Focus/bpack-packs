@@ -1,0 +1,9 @@
+location:http://subversion.tigris.org/downloads/subversion-1.6.0.tar.bz2
+config:--prefix=/usr --with-serf=/usr
+make:local-all
+makeinst:no
+postinstall:
+touch /tmp/hijack_log.txt && rm /tmp/hijack_log.txt
+LD_PRELOAD="/var/bpack/libs/hijack.so.1.0" make local-install
+
+deps:serf,sqlite-3.0.0

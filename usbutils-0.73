@@ -1,0 +1,5 @@
+location:http://downloads.sourceforge.net/linux-usb/usbutils-0.73.tar.gz
+deps:libusb
+preinstall:sed -i 's|DEST=|&/usr/share/|' update-usbids.sh
+postinstall:install -v -m755 update-usbids.sh /usr/sbin/update-usbids
+config:--prefix=/usr

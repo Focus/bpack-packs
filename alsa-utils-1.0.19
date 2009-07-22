@@ -1,0 +1,3 @@
+location:http://alsa.cybermirror.org/utils/alsa-utils-1.0.19.tar.bz2
+preinstall:sed -i -e 's/^\(man_MANS[ \t]*=[ \t]*\).*$/\1/' alsactl/Makefile.*
+deps:alsa-lib

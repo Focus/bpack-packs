@@ -1,0 +1,13 @@
+location:http://dbus.freedesktop.org/releases/dbus/dbus-1.2.12.tar.gz
+deps:expat,libxml2
+
+postinstall:groupadd -g 27 messagebus &&
+useradd -c "D-BUS Message Daemon User" -d /dev/null \
+        -u 27 -g messagebus -s /bin/false messagebus &&
+install -v -m755 -d /usr/share/doc/dbus-1.2.12 &&
+install -v -m644 doc/{TODO,*.{dtd,xml,xsl,txt,c}} \
+    /usr/share/doc/dbus-1.2.12
+
+preinstall:sed -i "1i\#include <syslog.h>" dbus/dbus-sysdeps-util-unix.c
+
+config: --prefix=/usr --sysconfdir=/etc --libexecdir=/usr/lib/dbus-1.0 --localstatedir=/var

@@ -1,0 +1,7 @@
+location:http://subversion.tigris.org/downloads/subversion-1.6.2.tar.bz2
+
+preinstall:wget http://svn.cross-lfs.org/svn/repos/patches/subversion/subversion-1.6.2-build_fix-1.patch && patch -Np1 -i ./subversion-1.6.2-build_fix-1.patch
+
+config:--prefix=/usr --with-serf=/usr
+
+deps:serf,sqlite-3.0.0

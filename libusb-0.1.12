@@ -1,0 +1,3 @@
+deps:pkg-config
+location:http://prdownloads.sourceforge.net/libusb/libusb-0.1.12.tar.gz
+config:--prefix=/usr --disable-build-docs

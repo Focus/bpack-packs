@@ -1,0 +1,9 @@
+location:http://fontconfig.org/release/fontconfig-2.6.0.tar.gz
+deps:freetype,expat
+optional:libxml2,docbook-utils
+config:--prefix=/usr --sysconfdir=/etc --disable-docs --localstatedir=/var --without-add-fonts --withdocdir=/usr/share/doc/fontconfig-2.6.0 {libxml2} --enable-libxml2
+postinstall:install -v -m644 doc/*.3 /usr/share/man/man3 &&
+install -v -m644 doc/*.5 /usr/share/man/man5 &&
+install -v -m755 -d /usr/share/doc/fontconfig-2.6.0/fontconfig-devel &&
+install -v -m644 doc/*.{html,pdf,txt} /usr/share/doc/fontconfig-2.6.0 &&
+install -v -m644 doc/fontconfig-devel/* /usr/share/doc/fontconfig-2.6.0/fontconfig-devel

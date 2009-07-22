@@ -1,0 +1,9 @@
+location:http://prdownloads.sourceforge.net/enlightenment/imlib2-1.4.1.tar.gz
+deps:freetype,libpng,libjpeg,
+optional:!xorg,libtiff,giflib,libid3tag
+preinstall:CPPFLAGS="-I/usr/X11R6/include" \
+./configure --prefix=/usr
+configure:no
+postinstall:install -v -m755 -d /usr/share/doc/imlib2-1.4.1 &&
+install -v -m644 doc/{*.gif,index.html} \
+    /usr/share/doc/imlib2-1.4.1

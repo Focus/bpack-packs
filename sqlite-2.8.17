@@ -1,0 +1,2 @@
+location:http://sqlite.org/sqlite-2.8.17.tar.gz
+config:--prefix=/usr
