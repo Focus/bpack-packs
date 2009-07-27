@@ -1,0 +1,8 @@
+location:http://www.kernel.org/pub/software/utils/pciutils/pciutils-3.1.2.tar.bz2
+deps:wget,which
+optional:pkg-config
+config:no
+make:no
+makeinst:PREFIX=/usr SHARED=yes
+preinstall:make PREFIX=/usr CC="gcc -fPIC" ZLIB=no SHARED=yes
+postinstall:make PREFIX=/usr SHARED=yes install-lib

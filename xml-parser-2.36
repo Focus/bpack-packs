@@ -1,0 +1,5 @@
+location:http://cpan.org/authors/id/M/MS/MSERGEANT/XML-Parser-2.36.tar.gz
+deps:expat
+config:no
+preinstall:perl Makefile.PL
+

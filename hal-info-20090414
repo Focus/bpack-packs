@@ -1,0 +1,2 @@
+location:http://hal.freedesktop.org/releases/hal-info-20090414.tar.gz
+config:--prefix=/usr --sysconfdir=/etc

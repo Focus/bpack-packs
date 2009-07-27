@@ -1,0 +1,4 @@
+location:http://www.python.org/ftp/python/2.6.1/Python-2.6.1.tar.bz2
+preinstall:sed -i "s@/usr/X11R6@${XORG_PREFIX}@g" setup.py
+config:--prefix=/usr --enable-shared 
+

@@ -1,0 +1,9 @@
+location:http://hal.freedesktop.org/releases/PolicyKit-0.9.tar.gz
+deps:glib-2,dbus-glib,xmlto
+optional:gtk-doc,initltool,selinux
+preinstall:groupadd -g 26 polkit &&
+useradd -c "Policy Kit Daemon User" -d /dev/null \
+        -u 26 -g polkit -s /bin/false polkit
+config:--prefix=/usr --sysconfdir=/etc \
+    --libexecdir=/usr/lib/PolicyKit --localstatedir=/var \
+    --with-polkit-user=polkit --with-polkit-group=polkit

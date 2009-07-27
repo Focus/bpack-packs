@@ -1,0 +1,8 @@
+location:http://hal.freedesktop.org/releases/hal-0.5.12.tar.gz
+deps:dbus-glib,glib-2,python,xml-parser
+optional:!expat,!hal-info,!pciutils,!libusb,!usbutils,!policykit,!consolekit,parted,dmidecode,acpid,doxygen,docbook-utils,intltool,gtk-doc,pm-utils,eject,libsmbios
+config: --prefix=/usr --sysconfdir=/etc \
+    --libexecdir=/usr/lib/hal --localstatedir=/var \
+    {policykit} --enable-policy-kit {consolekit} --enable-console-kit \
+    --enable-acl-management --enable-umount-helper 
+postinstall:install -m755 -d /var/run/hald
