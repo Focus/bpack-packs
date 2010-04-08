@@ -1,0 +1,5 @@
+location:http://ftp.vim.org/pub/vim/unix/vim-7.0.tar.bz2
+patches:http://svn.cross-lfs.org/svn/repos/patches/vim/vim-7.0-fixes-23.patch
+optional:xorg,gtk,python,tlc,ruby,gpm
+config:--prefix=/usr --with-features=huge
+

@@ -1,0 +1,5 @@
+location:http://www.irssi.org/files/irssi-0.8.10a.tar.bz2
+patches:http://svn.cross-lfs.org/svn/repos/patches/irssi/irssi-0.8.10a-gslice-1.patch
+optional:pkg-config
+deps:glib
+config:--prefix=/usr --sysconfdir=/etc

@@ -1,0 +1,8 @@
+location:http://www.openssl.org/source/openssl-0.9.8k.tar.gz
+patches:http://svn.cross-lfs.org/svn/repos/patches/openssl/openssl-0.9.8k-fix_manpages-1.patch,http://svn.cross-lfs.org/svn/repos/patches/openssl/openssl-0.9.8k-build_fix-1.patch
+config:--openssldir=/etc/ssl --prefix=/usr shared
+make:MANDIR=/usr/share/man
+makeinst:MANDIR=/usr/share/man
+postinstall:install -v -d -m755 /usr/share/doc/openssl-0.9.8k &&
+cp -v -r doc/{HOWTO,README,*.{txt,html,gif}} \
+    /usr/share/doc/openssl-0.9.8k
